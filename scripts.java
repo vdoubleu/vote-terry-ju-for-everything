@@ -7,17 +7,12 @@ public class scripts {
 	public static void main(String[] args){		
 		int numberOfFields = 17;
 		
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		wait(3000);
 		
-		for(int j = 0; j < 5; j++){
+		for(int j = 0; j < 3; j++){
 		mouseMove(750, 580);//initial position
 		leftClick();
-		
+
 		for(int i = 0; i < numberOfFields; i++){
 		typeWord("terrence ju");
 		pressKey(9);
@@ -25,12 +20,23 @@ public class scripts {
 		
 		pressKey(10);
 		
+		wait(2000);
 		
-		mouseMove(250, 10); //open
-		leftClick();
-		mouseMove(230, 10); //close
-		leftClick();
+		mouseMove(125, 50); //open
 		
+		leftClick();
+
+		wait(2000);
+		
+		}
+	}
+	
+	public static void wait(int millis){
+		try {
+			Thread.sleep(millis);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 	
