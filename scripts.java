@@ -14,6 +14,7 @@ public class scripts {
 			e.printStackTrace();
 		}
 		
+		for(int j = 0; j < 5; j++){
 		mouseMove(750, 580);//initial position
 		leftClick();
 		
@@ -23,7 +24,14 @@ public class scripts {
 		}
 		
 		pressKey(10);
-	
+		
+		
+		mouseMove(250, 10); //open
+		leftClick();
+		mouseMove(230, 10); //close
+		leftClick();
+		
+		}
 	}
 	
 	public static void mouseMove(int x, int y){
